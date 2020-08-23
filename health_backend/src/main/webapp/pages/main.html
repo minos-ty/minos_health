@@ -54,6 +54,7 @@
             <el-container>
                 <el-aside width="200px">
                     <el-menu>
+                        <!--v-for 遍历 menuList-->
                         <el-submenu v-for="menu in menuList" :index="menu.path">
                             <template slot="title">
                                 <i class="fa" :class="menu.icon"></i>

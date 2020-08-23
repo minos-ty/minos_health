@@ -4,12 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>health_parent</artifactId>
-        <groupId>com.minos</groupId>
+        <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.minos</groupId>
     <artifactId>health_common</artifactId>
+
+
     <!--指定工程打包方式,父工程的打包方式为pom-->
     <packaging>jar</packaging>
     <!--  添加阿里云镜像仓库-->
@@ -152,6 +155,7 @@
             <artifactId>spring-security-taglibs</artifactId>
         </dependency>
     </dependencies>
+
 
 
 </project>
