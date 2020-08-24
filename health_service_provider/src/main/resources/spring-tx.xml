@@ -15,6 +15,7 @@
     <!-- 事务管理器  -->
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    <!--这里的红色是IDEA工具的问题，代码是正确的-->
         <property name="dataSource" ref="dataSource"/>
     </bean>
     <!--
