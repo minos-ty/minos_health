@@ -17,13 +17,13 @@
     <packaging>pom</packaging>
 
     <!--  添加阿里云镜像仓库-->
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>aliyun</id>-->
-<!--            <name>aliyun</name>-->
-<!--            <url>http://maven.aliyun.com/repository/public</url>-->
-<!--        </repository>-->
-<!--    </repositories>-->
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <name>aliyun</name>
+            <url>http://maven.aliyun.com/repository/public</url>
+        </repository>
+    </repositories>
 
 <!--     集中定义依赖版本号 -->
     <properties>
@@ -235,6 +235,7 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+
             <dependency>
                 <groupId>dom4j</groupId>
                 <artifactId>dom4j</artifactId>
