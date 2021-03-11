@@ -25,6 +25,7 @@ public class CheckGroupServiceImpl implements CheckGroupService {
     @Autowired
     private CheckGroupDao checkGroupDao;
     //新增检查组，同时需要让检查组关联检查项
+    @Override
     public void add(CheckGroup checkGroup, Integer[] checkitemIds) {
         //新增检查组，操作t_checkgroup表
         checkGroupDao.add(checkGroup);

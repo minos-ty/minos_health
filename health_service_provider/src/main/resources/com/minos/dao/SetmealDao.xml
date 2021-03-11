@@ -20,7 +20,7 @@
         <collection
                 property="checkGroups"
                 ofType="com.minos.pojo.CheckGroup"
-                select="com.itheima.dao.CheckGroupDao.findCheckGroupById"
+                select="com.minos.dao.CheckGroupDao.findCheckGroupById"
                 column="id"
                 >
         </collection>
