@@ -4,9 +4,9 @@
     <!-- 页面meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>传智健康</title>
-    <meta name="description" content="传智健康">
-    <meta name="keywords" content="传智健康">
+    <title>健康沧师</title>
+    <meta name="description" content="健康沧师">
+    <meta name="keywords" content="健康沧师">
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
     <!-- 引入样式 -->
     <link rel="stylesheet" href="../plugins/elementui/index.css">
@@ -36,8 +36,8 @@
                         <span class="help"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>帮助</span>
                         <el-dropdown class="avatar-container right-menu-item" trigger="click">
                             <div class="avatar-wrapper">
-                                <img src="../img/user2-160x160.jpg" class="user-avatar">
-                                Jay.Liu
+                                <img src="../img/user1-128x128.jpg" class="user-avatar">
+                                admin
                             </div>
                             <el-dropdown-menu slot="dropdown">
                                 <el-dropdown-item divided>
@@ -78,10 +78,12 @@
 <script src="../js/vue.js"></script>
 <script src="../plugins/elementui/index.js"></script>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
+<script src="../js/axios-0.18.0.js"></script>
 <script>
     new Vue({
         el: '#app',
         data:{
+            username:'',//当前登录用户的用户名
             menuList:[
                 {
                     "path": "1",
@@ -170,18 +172,38 @@
                     "children":[//是否有子菜单，若没有，则为[]
                         {
                             "path": "/5-1",
-                            "title": "工作量统计",
-                            "linkUrl":"all-medical-list.html",
+                            "title": "会员数量统计",
+                            "linkUrl":"report_member.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/5-2",
+                            "title": "套餐预约占比统计",
+                            "linkUrl":"report_setmeal.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/5-3",
+                            "title": "运营数据统计",
+                            "linkUrl":"report_business.html",
                             "children":[]
                         }
                     ]
                 }
             ]
+        },
+        created(){
+            //发送ajax请求，请求Controller获取当前登录用户的用户名，展示到页面中
+            axios.get("/user/getUsername.do").then((res) => {
+                if(res.data.flag){
+                    this.username = res.data.data;
+                }
+            });
         }
     });
     $(function() {
-            var wd = 200;
-            $(".el-main").css('width', $('body').width() - wd + 'px');
+        var wd = 200;
+        $(".el-main").css('width', $('body').width() - wd + 'px');
     });
 </script>
 </html>

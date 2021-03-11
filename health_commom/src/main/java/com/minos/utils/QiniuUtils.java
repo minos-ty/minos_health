@@ -16,7 +16,7 @@ import com.qiniu.util.Auth;
 public class QiniuUtils {
     public  static String accessKey = "dulF9Wze9bxujtuRvu3yyYb9JX1Sp23jzd3tO708";
     public  static String secretKey = "vZkhW7iot3uWwcWz9vXfbaP4JepdWADFDHVLMZOe";
-    public  static String bucket = "itcasthealth_space_1";
+    public  static String bucket = "minoshealth_space_1";
 
     public static void upload2Qiniu(String filePath,String fileName){
         //构造一个带指定Zone对象的配置类

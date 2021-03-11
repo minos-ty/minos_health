@@ -12,6 +12,7 @@
         <module>health_interface</module>
         <module>health_service_provider</module>
         <module>health_backend</module>
+        <module>health_mob</module>
     </modules>
     <!--父类指定打包方法为pom-->
     <packaging>pom</packaging>

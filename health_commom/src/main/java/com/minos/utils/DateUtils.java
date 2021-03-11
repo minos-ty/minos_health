@@ -285,10 +285,12 @@ public class DateUtils {
         return calendar.getTime();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
+
         try {
             System.out.println("本周一" + parseDate2String(getThisWeekMonday()));
             System.out.println("本月一日" + parseDate2String(getFirstDay4ThisMonth()));
+            System.out.println(parseString2Date("2021-3-5","yyyy-MM-dd"));
         } catch (Exception e) {
             e.printStackTrace();
         }
